@@ -1,38 +1,193 @@
-.App {
+.App{
+  direction: flex;
+}
+
+.header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
   text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #333;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer_p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.home_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  opacity: 70%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.home_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Dark to light opacity */
+  border-radius: 10px;
+}
+
+
+.home_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: white;
+  color: transparent; /* Set text color to transparent */
+  border: none;
+  border-radius: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform-origin: right; /* Set the transform origin to the center */
+  background-image: linear-gradient(to right, #292929, #0a0900); /* Gradient background */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  background-clip: text;
+}
+
+.home_button:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  background-image: linear-gradient(to right, #ff8a00, #e52e71); /* Apply gradient on hover */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+.home_button:hover {
+  transform: scale(2.00);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Assuming you have a separate CSS file or you can include this within a <style> tag */
+
+.recipe-details {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.recipe_details_h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe_details_p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.recipe-list {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.recipe_list_h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe_list_ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe_list_li {
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recipe_list_li:hover {
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.App_button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.App_button:hover {
+  background-color: #0056b3;
+}
+
+
+.App_Button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add some spacing from other content */
 }
